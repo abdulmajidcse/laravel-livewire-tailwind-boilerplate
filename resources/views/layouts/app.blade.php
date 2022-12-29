@@ -14,7 +14,12 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
+    <!-- toastrjs css -->
+    <link rel="stylesheet" href="{{ asset('css/toastr.css') }}" />
+
     @livewireStyles
+
+    @stack('styles')
 </head>
 
 <body class="font-sans antialiased">
@@ -36,7 +41,16 @@
         </main>
     </div>
 
+    {{-- jquery --}}
+    <script src="{{ asset('js/jquery-3.6.3.min.js') }}"></script>
+    <!-- toastr js -->
+    <script src="{{ asset('js/toastr.min.js') }}"></script>
+
     @livewireScripts
+
+    <x-toastr-livewire-config />
+
+    @stack('scripts')
 </body>
 
 </html>
