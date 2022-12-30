@@ -15,17 +15,14 @@
     <link rel="stylesheet" href="{{ asset('dist/css/toastr.css') }}" />
     <link rel="stylesheet" href="{{ asset('dist/fontawesome/css/all.min.css') }}" />
 
+    <script defer src="{{ asset('dist/js/alpinejs.min.js') }}"></script>
+
     @livewireStyles
 
     @stack('styles')
 </head>
 
-<body>
-
-    <script src="{{ asset('dist/js/alpinejs.min.js') }}"></script>
-    <script src="{{ asset('dist/js/alpine-store.js') }}"></script>
-
-
+<body x-data>
     <div class="dark:bg-slate-800 dark:highlight-white/5 dark:text-slate-400 min-h-screen">
         <header
             class="p-4 text-base border-b border-slate-900/10 dark:border-slate-300/10 sticky top-0 z-40 w-full flex-none bg-white/95 dark:bg-slate-800 backdrop-blur">
