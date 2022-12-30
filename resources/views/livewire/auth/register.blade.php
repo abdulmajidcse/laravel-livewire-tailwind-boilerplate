@@ -41,6 +41,21 @@
                 <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
             </div>
 
+            <!-- agree -->
+            {{-- <div class="block mt-4">
+                <label for="agree" class="inline-flex items-center">
+                    <input id="agree" type="checkbox"
+                        class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800"
+                        name="agree" wire:model.defer="agree">
+                    <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">I agree to your
+                        <a href="#" class="text-blue-800 dark:text-blue-400 hover:underline">Terms</a>,
+                        <a href="#" class="text-blue-800 dark:text-blue-400 hover:underline">Privacy Policy</a>
+                        and
+                        <a href="#" class="text-blue-800 dark:text-blue-400 hover:underline">Cookies
+                            Policy</a></span>
+                </label>
+            </div> --}}
+
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800"
                     href="{{ route('login') }}">

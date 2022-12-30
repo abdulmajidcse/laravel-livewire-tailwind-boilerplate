@@ -45,10 +45,19 @@
                     </a>
                 @endif
 
-                <x-primary-button class="ml-3">
+                <x-primary-button class="ml-4">
                     {{ __('Log in') }}
                 </x-primary-button>
             </div>
+
+            @if (Route::has('register'))
+                <div class="flex justify-center mt-4 border-t border-gray-300 dark:border-gray-500">
+                    <a href="{{ route('register') }}"
+                        class="mt-3 px-4 py-2 bg-purple-700 dark:bg-purple-600 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-purple-500 dark:hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-gray-800 transition ease-in-out duration-150 ml-4">
+                        Create New Account
+                    </a>
+                </div>
+            @endif
         </fieldset>
     </form>
 
