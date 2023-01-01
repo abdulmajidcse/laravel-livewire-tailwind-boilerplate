@@ -23,6 +23,8 @@
 </head>
 
 <body x-data>
+    <x-loading id="pre_loader" />
+
     <div class="dark:bg-slate-800 dark:highlight-white/5 dark:text-slate-400 min-h-screen">
         <x-app.header />
 
@@ -48,6 +50,12 @@
     @livewireScripts
 
     <x-toastr-livewire-config />
+
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector('#pre_loader').classList.add('hidden');
+        });
+    </script>
 
     @stack('scripts')
 </body>

@@ -1,6 +1,6 @@
 <div>
-    <div wire:loading wire:target="store">
-        <p class="font-bold text-red-600 dark:text-red-400">Loading...</p>
+    <div wire:loading>
+        <x-loading />
     </div>
 
     <!-- Session Status -->

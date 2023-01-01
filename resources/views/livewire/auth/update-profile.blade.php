@@ -10,7 +10,7 @@
     </header>
 
     <div wire:loading>
-        <p class="font-bold text-red-600 dark:text-red-400">Loading...</p>
+        <x-loading />
     </div>
 
     <form wire:submit.prevent="store">

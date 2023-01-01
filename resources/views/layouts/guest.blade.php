@@ -21,6 +21,8 @@
 </head>
 
 <body>
+    <x-loading id="pre_loader" />
+
     <!-- theme section -->
     <div class="fixed top-4 right-4 md:top-10 md:right-10 z-20">
         <x-theme />
@@ -50,6 +52,12 @@
     @livewireScripts
 
     <x-toastr-livewire-config />
+
+    <script>
+        window.addEventListener("load", function() {
+            document.querySelector('#pre_loader').classList.add('hidden');
+        });
+    </script>
 
     @stack('scripts')
 </body>
