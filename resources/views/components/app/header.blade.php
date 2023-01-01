@@ -317,7 +317,7 @@
 
 <!-- search modal -->
 <div id="search-modal" tabindex="-1"
-    class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+    class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full backdrop-blur-sm">
     <div class="relative h-full min-w-full sm:min-w-[90vw] md:min-w-[70vw] lg:min-w-[50vw]">
         <div class="relative bg-white rounded shadow dark:bg-gray-700">
             <button type="button"
