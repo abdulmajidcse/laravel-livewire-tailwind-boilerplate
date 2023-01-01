@@ -20,12 +20,9 @@ Route::prefix('auth')->group(function () {
     Route::middleware(['auth'])->group(function () {
         Route::name('auth.')->group(function () {
             Route::view('/', 'auth.dashboard')->name('dashboard');
+            Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
         });
-
-        Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-        Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-        Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     });
 
-    require __DIR__.'/web/auth.php';
+    require __DIR__ . '/web/auth.php';
 });
