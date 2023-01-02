@@ -22,6 +22,33 @@
                     <div class="mr-2 shadow-sm dark:highlight-white/10">
                         <i class="fa-solid fa-file-lines text-lg"></i>
                     </div>
+                    Category
+                    <i class="fas fa-angle-left absolute right-2" :class="{ '-rotate-90': open }"></i>
+                </a>
+                <!-- dropdown menu -->
+                <ul class="my-1" x-show="open">
+                    <li>
+                        <a href="{{ route('auth.categories.create') }}"
+                            class="sub-link block mb-1 rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            <i class="far fa-circle mr-2"></i> Add New
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('auth.categories.index') }}"
+                            class="sub-link block rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600">
+                            <i class="far fa-circle mr-2"></i> Category List
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li x-data="{ open: false }" class="mb-1">
+                <a href="#"
+                    class="sub-link flex items-center lg:leading-6 text-base relative rounded p-2 hover:bg-gray-300 dark:hover:bg-slate-300/10 focus:outline-none focus:ring-2 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    :class="{ 'active': open }" x-on:click="open = !open">
+                    <div class="mr-2 shadow-sm dark:highlight-white/10">
+                        <i class="fa-solid fa-file-lines text-lg"></i>
+                    </div>
                     Pages
                     <i class="fas fa-angle-left absolute right-2" :class="{ '-rotate-90': open }"></i>
                 </a>
