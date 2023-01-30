@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}"
-    class="scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-slate-400">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="awesome-scrollbar scroll-smooth">
 
 <head>
     <meta charset="utf-8">

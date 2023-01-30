@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer components {
+    .awesome-scrollbar {
+        @apply scrollbar-thin scrollbar-thumb-purple-800 scrollbar-track-slate-900;
+    }
     /* sidebar top link active */
     .ta-sidebar .top-link.active {
         @apply bg-blue-800 text-white;
