@@ -2,7 +2,7 @@
 <div class="min-h-screen w-full fixed top-0 left-0 z-20 lg:hidden bg-black/20 backdrop-blur-sm dark:bg-slate-900/80"
     :class="!$store.sidebar.openIs && 'hidden'" x-on:click="$store.sidebar.openIs = false"></div>
 
-<div class="fixed z-20 inset-0 top-[3.8125rem] right-auto w-[17rem] pb-10 px-4 overflow-y-auto bg-white dark:bg-inherit border-r border-slate-900/10 dark:border-slate-300/10 shadow-2xl transition-all duration-300 awesome-scrollbar"
+<div class="fixed z-20 inset-0 top-[3.8125rem] right-auto w-[17rem] pb-10 px-4 overflow-y-auto bg-white dark:bg-slate-800 border-r border-slate-900/10 dark:border-slate-300/10 shadow-2xl transition-all duration-300 awesome-scrollbar"
     :class="$store.sidebar.openIs ? 'lg:left-0' : '-left-[20rem]'">
     <aside class="lg:text-sm lg:leading-6 relative mt-8 ta-sidebar">
         <ul class="text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300 text-base">

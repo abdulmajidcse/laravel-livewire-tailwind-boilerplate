@@ -1,4 +1,4 @@
-<footer class="bg-white dark:bg-gray-900/30 rounded-t shadow-lg mt-5">
+<footer class="bg-white dark:bg-gray-800 rounded-t shadow-lg mt-5">
     <div class="px-3 pt-2 pb-8">
         <hr class="mt-3 mb-10 border-gray-200 dark:border-gray-700" />
 

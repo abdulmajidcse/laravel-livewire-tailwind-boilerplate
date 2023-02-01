@@ -18,13 +18,19 @@
 
     @livewireStyles
 
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+
     @stack('styles')
 </head>
 
 <body x-data>
     <x-loading id="pre_loader" />
 
-    <div class="bg-gray-200 dark:bg-slate-800 dark:text-slate-400 min-h-screen">
+    <div class="bg-gray-200 dark:bg-gray-900 dark:text-slate-400 min-h-screen">
         <x-app.header />
         <x-app.sidebar />
 
