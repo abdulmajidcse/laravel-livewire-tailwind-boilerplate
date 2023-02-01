@@ -24,19 +24,17 @@
 <body x-data>
     <x-loading id="pre_loader" />
 
-    <div class="dark:bg-slate-800 dark:highlight-white/5 dark:text-slate-400 min-h-screen">
+    <div class="bg-gray-200 dark:bg-slate-800 dark:text-slate-400 min-h-screen">
         <x-app.header />
+        <x-app.sidebar />
 
-        <div class="max-w-8xl mx-auto px-4 sm:px-6 md:px-8 bg-slate-50 dark:bg-inherit">
-            <x-app.sidebar />
+        <div class="transition-all duration-300 px-4 sm:px-6 md:px-8"
+            :class="{ 'lg:ml-[17rem]': $store.sidebar.openIs }">
+            <main class="pt-5 min-h-[calc(100vh-13rem)]">
+                {{ $slot }}
+            </main>
 
-            <div class="transition-all duration-300" :class="{ 'lg:pl-[17rem]': $store.sidebar.openIs }">
-                <main class="pt-5 min-h-[calc(100vh-13rem)]">
-                    {{ $slot }}
-                </main>
-
-                <x-app.footer />
-            </div>
+            <x-app.footer />
         </div>
     </div>
 
