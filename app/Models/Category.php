@@ -20,4 +20,9 @@ class Category extends Model
         'parent_id',
         'slug',
     ];
+
+    public function parent()
+    {
+        return $this->belongsTo(Category::class, 'parent_id');
+    }
 }

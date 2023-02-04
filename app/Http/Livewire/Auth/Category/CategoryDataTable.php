@@ -20,7 +20,7 @@ class CategoryDataTable extends DataTableComponent
 
     public function builder(): Builder
     {
-        return Category::query()->orderBy('name');
+        return Category::query();
     }
 
     public function columns(): array
@@ -29,6 +29,8 @@ class CategoryDataTable extends DataTableComponent
             Column::make('SL')
                 ->label(fn ($row) => ++$this->sl),
             Column::make("Name", "name")
+                ->sortable()->searchable(),
+            Column::make("Slug", "slug")
                 ->sortable()->searchable(),
             Column::make("Created Date", "created_at")
                 ->sortable(),
